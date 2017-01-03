@@ -7,13 +7,16 @@
 .self {
   width: 100px;
   /*border-radius: 100%;*/
-  margin: 0 auto;
+  /*text-align: center;*/
 }
 
-h1 {
+.about-info {
   text-align: center;
+	color: white;
 }
-
+.contact-info {
+	color: white;
+}
 ul li{
   list-style: none;
   display: inline;
@@ -35,4 +38,12 @@ ul {
  nav {
    background-color: black;
    padding:50px;
+ }
+#contact {
+	background-color: black;
+	padding: 20px;
+
+}
+ address {
+	 margin: 0 auto; 
  }

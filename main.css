@@ -1,20 +1,33 @@
-img{
+.image-pic{
 	width: 267px;
 	height:150px;
 	padding-top: 23px;
 
 }
+.self {
+  width: 100px;
+  /*border-radius: 100%;*/
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
 ul li{
   list-style: none;
   display: inline;
   padding-right: 70px;
   color: white;
   font-size: 20px;
-
-
+}
+p{
+  font-size: 16px;
+  font-weight: normal;
 }
 a{
   text-decoration: none;
+  color:white;
 }
 ul {
   text-align: center;

@@ -1,0 +1,25 @@
+img{
+	width: 267px;
+	height:150px;
+	padding-top: 23px;
+
+}
+ul li{
+  list-style: none;
+  display: inline;
+  padding-right: 70px;
+  color: white;
+  font-size: 20px;
+
+
+}
+a{
+  text-decoration: none;
+}
+ul {
+  text-align: center;
+}
+ nav {
+   background-color: black;
+   padding:50px;
+ }

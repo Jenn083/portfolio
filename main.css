@@ -7,13 +7,19 @@
 .self {
   width: 100px;
   /*border-radius: 100%;*/
-  margin: 0 auto;
+
 }
 
 h1 {
   text-align: center;
-}
 
+}
+.center-self {
+	text-align: center;
+}
+.contact {
+	color: white;
+}
 ul li{
   list-style: none;
   display: inline;

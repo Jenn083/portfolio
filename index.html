@@ -7,17 +7,20 @@
     <link rel="stylesheet" type="text/css" href="float.css">
 	  <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
   </head>
   <body>
     <nav>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li class="about-nav">About</li>
+        <li class="portfolio-nav">Portfolio</li>
+        <li class="contact-nav">Contact</li>
       </ul>
     </nav>
     <main>
-      <section class="portfolio">
+      <section id="portfolio">
         <div class="row">
 		      <div class="col-4">
 			      <div class="img">
@@ -104,28 +107,32 @@
       </div>
       </section>
   </main>
-  <section id="about">
-    <h1>About<h1>
-    <div>
+  <section id="about" class="hide">
+    <h1 class="about">About</h1>
+    <div class="center-self">
       <img class="self" src="images/14288.jpg">
     </div>
-    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+    <p class="text-colors">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
   </section>
-  <section id="contact">
-    <h1>Contact Her @<h1>
+  <section id="contact" class="hide">
+    <h1 class="contact">Contact Her @<h1>
 
     <address>
-  	  <p>Email:<a class="email" href="https://www.gmail.com"> Jen's email</a></p>
+  	  <a class="email" href="https://www.gmail.com"> Jen's email</a>
     </address>
-  	  <a href="https://www.facebook.com/"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-  	  <a href="https://www.LinkedIn.com/"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-  	  <a href="https://www.Twitter.com"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-  	  <a href="https://www.GitHub.com"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
-
+    <div>
+      <ul>
+  	     <li><a href="https://www.facebook.com/"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+  	     <li><a href="https://www.LinkedIn.com/"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+  	     <li><a href="https://www.Twitter.com"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a></li>
+  	     <li><a href="https://www.GitHub.com"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
 
   </section>
 
   <footer>
   </footer>
+  <script src="script.js"></script>
   </body>
 </html>

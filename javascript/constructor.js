@@ -101,12 +101,15 @@ projects.forEach(function(ele) {
 
 var $rowEl = $('<div class="row"></div>');
 for (var i = 0; i < articles.length; i ++) {
-  if ( i > 0 && i % 3 === 0) {
+  $rowEl.append(articles[i].toHtml());
+  console.log(i);
+  console.log(i%3);
+  if ( i >= 0 && i % 3 === 2) {
     // row = create new row element
     $('#portfolio').append($rowEl);
     $rowEl = $('<div class="row"></div>');
   }
-  $rowEl.append(articles[i].toHtml());// put projects in the row;
+  // put projects in the row;
 
   // append column element = articles[i].toHtml();
 }

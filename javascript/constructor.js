@@ -68,14 +68,14 @@ var projects = [
 
 var articles = [];
 function Projects(options){
-  // this.projectUrl=options.projectUrl;
-  // this.publishedOn=options.publishedOn;
-  // this.body= options.body;
-  // this.title=options.title;
-  // this.image = options.image;
-  for(var key in options){
-    this[key] = options[key];
-  }
+  this.projectUrl=options.projectUrl;
+  this.publishedOn=options.publishedOn;
+  this.body= options.body;
+  this.title=options.title;
+  this.image = options.image;
+  // for(var key in options){
+  //   this[key] = options[key];
+  // }
 }
 
 Projects.prototype.toHtml = function() {
@@ -91,8 +91,8 @@ Projects.prototype.toHtml = function() {
 // $column.append($title);
 // $column.append($image);
 // return $column;
-var source = $('article-template').html();
-var templateRender=handlebars.compile(source);
+var source = $('#article-template').html();
+var templateRender=Handlebars.compile(source);
 return templateRender(this);
 };
 
@@ -100,9 +100,9 @@ return templateRender(this);
 //   return (new Date(nextObject.publishedOn)) - (new Date(currentObject.publishedOn));
 // });
 
-projects.forEach(function(ele) {
-  articles.push(new Projects(ele));
-});
+// projects.forEach(function(ele) {
+//   articles.push(new Projects(ele));
+// });
 
 // var $rowEl = $('<div class="row"></div>');
 // for (var i = 0; i < articles.length; i ++) {
@@ -119,5 +119,5 @@ projects.forEach(function(ele) {
 });
 
 articles.forEach(function(article) {
-  $('#articles').append(article.toHtml());
+  $('#portfolio').append(article.toHtml());
 });

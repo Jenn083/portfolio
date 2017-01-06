@@ -33,6 +33,9 @@ a {
   text-decoration: none;
   color:white;
 }
+li{
+	color:white;
+}
 ul {
   text-align: center;
 }
@@ -43,15 +46,15 @@ ul {
 #contact {
 	background-color: black;
 }
-nav:hover ul {
-  display: block;
-}
-nav ul {
+/*nav:hover ul {*/
+  /*display: block;*/
+/*}*/
+/*nav ul {
   display: none;
   padding: 0;
   list-style: none;
   clear: both;
-}
+}*/
 @media screen and (min-width:960px) {
   nav ul li {
     display: inline-block;

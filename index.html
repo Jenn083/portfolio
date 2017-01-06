@@ -10,6 +10,34 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
+  <!-- <script id="article-template" type="text/x-handlebars-template">
+<article data-author="" data-category="{{category}}">
+   <header>
+     <h1>{{title}}</h1>
+     <div class="byline">
+       By <address><a href="{{authorUrl}}">{{author}}</a></address>
+       published <time pubdate datetime="">{{publishedOn}}</time>
+     </div>
+   </header>
+   <section class="article-body">{{{body}}}</section>
+   <a href="#" class="read-on">Read on &rarr;</a>
+ </article>
+</script> -->
+<script id="article-template" type="text/x-handlebars-template">
+<section id = "portfolio">
+  <div class="row">
+    <div class="col-4">
+      <div class="title">{{title}}</div>
+      <div class="img">
+        <img class="image-pic" src="{{image}}">
+        <div class="description">
+          <p>{{body}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</script>
   </head>
   <body>
     <nav>
@@ -33,7 +61,6 @@
   </section>
   <section id="contact" class="hide">
     <h1 class="contact">Contact Her @<h1>
-
     <address>
   	  <a class="email" href="https://www.gmail.com"> Jen's email</a>
     </address>
@@ -46,7 +73,7 @@
       </ul>
     </div>
   </section>
-  <script aec="javascript/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
   <script src="javascript/constructor.js"></script>
   <script src="javascript/script.js"></script>
   </body>

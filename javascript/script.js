@@ -15,7 +15,6 @@ $(document).ready(function(){
   $('.about-nav').on('click',function(){
     hide();
     $('#about').show();
-
   });
 
   $('.contact-nav').on('click', function(){

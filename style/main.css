@@ -1,13 +1,11 @@
-.image-pic{
+.image-pic {
 	width: 267px;
 	height:150px;
 	padding-top: 23px;
-
 }
 .self {
   width: 100px;
   /*border-radius: 100%;*/
-
 }
 
 h1 {
@@ -20,18 +18,18 @@ h1 {
 .contact {
 	color: white;
 }
-ul li{
+ul li {
   list-style: none;
   display: inline;
   padding-right: 70px;
   color: white;
   font-size: 20px;
 }
-p{
+p {
   font-size: 16px;
   font-weight: normal;
 }
-a{
+a {
   text-decoration: none;
   color:white;
 }
@@ -44,4 +42,23 @@ ul {
  }
 #contact {
 	background-color: black;
+}
+nav:hover ul {
+  display: block;
+}
+nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+@media screen and (min-width:960px) {
+  nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding-right: 155px;
+    i {
+      padding-right: 20px;
+    }
+  }
 }

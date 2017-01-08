@@ -5,7 +5,6 @@
 }
 .self {
   width: 100px;
-  /*border-radius: 100%;*/
 }
 
 h1 {
@@ -44,24 +43,39 @@ ul {
    padding:50px;
  }
 #contact {
-	background-color: black;
+	background-image: url("http://media.istockphoto.com/photos/art-abstract-texture-painted-on-art-canvas-background-picture-id515965424?k=6&m=515965424&s=170667a&w=0&h=Cm8a0t47bPporGEwQOCPpiF3SizXaZWaw2i2Pcgsz4k=");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
 }
-/*nav:hover ul {*/
-  /*display: block;*/
-/*}*/
-/*nav ul {
-  display: none;
-  padding: 0;
-  list-style: none;
-  clear: both;
-}*/
-@media screen and (min-width:960px) {
-  nav ul li {
-    display: inline-block;
+.text-colors{
+	margin-top:100px;
+	color:black;
+}
+.about{
+	margin-top:30px;
+}
+.para-width{
+	margin:30px;
+	height: 100%;
+}
+#about{
+	background-image: url("http://media.istockphoto.com/photos/art-abstract-texture-painted-on-art-canvas-background-picture-id515965424?k=6&m=515965424&s=170667a&w=0&h=Cm8a0t47bPporGEwQOCPpiF3SizXaZWaw2i2Pcgsz4k=");
+background-repeat: no-repeat;
+background-size: cover;
+	color: black;
+	font-size: 30px;
+	font-family: cursive;
+	height: 100%;
+}
+@media only screen and (max-width:460px) {
+  nav ul li{
+    display: block;
     list-style: none;
-    padding-right: 155px;
-    i {
+    /*padding-right: 155px;*/
+    /*i {
       padding-right: 20px;
-    }
+    }*/
+		text-align: left;
   }
 }

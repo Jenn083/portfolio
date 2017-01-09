@@ -1,3 +1,6 @@
+*{
+	border: 1px soilid black;
+}
 .image-pic {
 	width: 267px;
 	height:150px;
@@ -5,15 +8,20 @@
 }
 .self {
   width: 100px;
-  /*border-radius: 100%;*/
+
 }
 
 h1 {
-  text-align: center;
+  /*text-align: center;*/
 
 }
 .center-self {
-	text-align: center;
+	/*text-align: center;*/
+	/*margin:0 auto;*/
+float:left;
+}
+.about {
+	margin:0 auto;
 }
 .contact {
 	color: white;
@@ -35,33 +43,67 @@ a {
 }
 li{
 	color:white;
+	cursor: pointer;
 }
 ul {
   text-align: center;
+
 }
  nav {
    background-color: black;
    padding:50px;
+	 display:
+
  }
 #contact {
-	background-color: black;
+	background-image: url("http://media.istockphoto.com/photos/art-abstract-texture-painted-on-art-canvas-background-picture-id515965424?k=6&m=515965424&s=170667a&w=0&h=Cm8a0t47bPporGEwQOCPpiF3SizXaZWaw2i2Pcgsz4k=");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	padding-top: 50px;
+	padding-bottom:600px;
 }
-/*nav:hover ul {*/
-  /*display: block;*/
-/*}*/
-/*nav ul {
-  display: none;
-  padding: 0;
-  list-style: none;
-  clear: both;
-}*/
-@media screen and (min-width:960px) {
-  nav ul li {
-    display: inline-block;
+.text-color{
+	margin-top:60px;
+	color:black;
+	float:right;
+}
+.center-self{
+	text-align: center;
+
+}
+.para-width{
+	/*margin:60px;*/
+	/*height: 100%;*/
+	margin:0 auto;
+	width:400px;
+	/*float: right;*/
+}
+div.para-width {
+		/*margin: 0 auto;*/
+		/*float:right;*/
+}
+#about{
+	background-image: url("http://media.istockphoto.com/photos/art-abstract-texture-painted-on-art-canvas-background-picture-id515965424?k=6&m=515965424&s=170667a&w=0&h=Cm8a0t47bPporGEwQOCPpiF3SizXaZWaw2i2Pcgsz4k=");
+background-repeat: no-repeat;
+background-size: cover;
+	color: black;
+	font-size: 30px;
+	font-family: cursive;
+	font-weight: bolder;
+	height: 100%;
+	margin-top: 0px;
+	padding-top: 50px;
+	padding-bottom:600px;
+}
+@media only screen and (max-width:460px) {
+  nav ul li{
+    display: block;
     list-style: none;
-    padding-right: 155px;
-    i {
+    /*padding-right: 155px;*/
+    /*i {
       padding-right: 20px;
-    }
+    }*/
+		text-align: left;
   }
 }

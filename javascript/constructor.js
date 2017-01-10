@@ -1,70 +1,70 @@
 'use strict';
-var projects = [
-  {
-    title: 'Rome',
-    projectUrl:'http://github.com',
-    image:'images/one.jpg',
-    publishedOn:'2015-01-03',
-    body:'Write Descript'
-  },
-  {
-    title: 'Italy',
-    projectUrl:'http://github.com',
-    image:'images/two.jpg',
-    publishedOn:'2015-01-03',
-    body:'Write Descript'
-  },
-  {
-    title: 'Sydney',
-    projectUrl:'http://github.com',
-    image:'images/three.jpg',
-    publishedOn:'2015-01-03',
-    body:'Write Descript'
-  },
-  {
-    title: 'Paris',
-    projectUrl:'http://github.com',
-    image:'images/four.jpg',
-    publishedOn:'2015-01-03',
-    body:'Write Descript'
-  },
-  {
-    title: 'Toronto',
-    projectUrl:'http://github.com',
-    image:'images/five.jpg',
-    publishedOn:'2015-01-03',
-    body:'Write Descript'
-  },
-  {
-    title: 'Moscow',
-    projectUrl:'http://github.com',
-    image:'images/six.jpg',
-    publishedOn:'2015-01-03',
-    body:'Write Descript'
-  },
-  {
-    title: 'London',
-    projectUrl:'http://github.com',
-    image:'images/seven.jpg',
-    publishedOn:'2015-01-03',
-    body:'Write Descript'
-  },
-  {
-    title: 'New York',
-    projectUrl:'http://github.com',
-    image:'images/eight.jpg',
-    publishedOn:'2015-01-03',
-    body:'Write Descript'
-  },
-  {
-    title: 'Spain',
-    projectUrl:'http://github.com',
-    image:'images/nine.jpg',
-    publishedOn:'2015-01-03',
-    body:'Write Descript'
-  },
-
-];
+// var projects = [
+//   {
+//     title: 'Rome',
+//     projectUrl:'http://github.com',
+//     image:'images/one.jpg',
+//     publishedOn:'2015-01-03',
+//     body:'Write Descript'
+//   },
+//   {
+//     title: 'Italy',
+//     projectUrl:'http://github.com',
+//     image:'images/two.jpg',
+//     publishedOn:'2015-01-03',
+//     body:'Write Descript'
+//   },
+//   {
+//     title: 'Sydney',
+//     projectUrl:'http://github.com',
+//     image:'images/three.jpg',
+//     publishedOn:'2015-01-03',
+//     body:'Write Descript'
+//   },
+//   {
+//     title: 'Paris',
+//     projectUrl:'http://github.com',
+//     image:'images/four.jpg',
+//     publishedOn:'2015-01-03',
+//     body:'Write Descript'
+//   },
+//   {
+//     title: 'Toronto',
+//     projectUrl:'http://github.com',
+//     image:'images/five.jpg',
+//     publishedOn:'2015-01-03',
+//     body:'Write Descript'
+//   },
+//   {
+//     title: 'Moscow',
+//     projectUrl:'http://github.com',
+//     image:'images/six.jpg',
+//     publishedOn:'2015-01-03',
+//     body:'Write Descript'
+//   },
+//   {
+//     title: 'London',
+//     projectUrl:'http://github.com',
+//     image:'images/seven.jpg',
+//     publishedOn:'2015-01-03',
+//     body:'Write Descript'
+//   },
+//   {
+//     title: 'New York',
+//     projectUrl:'http://github.com',
+//     image:'images/eight.jpg',
+//     publishedOn:'2015-01-03',
+//     body:'Write Descript'
+//   },
+//   {
+//     title: 'Spain',
+//     projectUrl:'http://github.com',
+//     image:'images/nine.jpg',
+//     publishedOn:'2015-01-03',
+//     body:'Write Descript'
+//   },
+//
+// ];
 
 var articles = [];
 function Projects(options){
@@ -121,3 +121,29 @@ for (var i = 0; i < articles.length; i ++) {
 // articles.forEach(function(article) {
 //   $('#portfolio').append(article.toHtml());
 // });
+
+
+Article.loadAll = function(rawData) {
+  rawData.sort(function(a,b) {
+    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  });
+
+  rawData.forEach(function(ele) {
+    Article.all.push(new Article(ele));
+  })
+}
+Article.fetchAll = function() {
+  if (localStorage.rawData) {
+    var myObj= JSON.parse(localStorage.rawData);
+    Article.loadAll(myObj);
+      articleView.initIndexPage();
+  } else {
+    var receivedData = $.getJSON('data/proArr.json', function(data){
+      localStorage.setItem('rawData', JSON.stringify(data));
+      Article.loadAll(data);
+      articleView.initIndexPage();
+    });
+
+
+  }
+}

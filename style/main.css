@@ -25,6 +25,9 @@ float:left;
 }
 .contact {
 	color: white;
+	font-size: 100px;
+	text-align: center;
+	color: black;
 }
 ul li {
   list-style: none;
@@ -39,7 +42,8 @@ p {
 }
 a {
   text-decoration: none;
-  color:white;
+  color:black;
+
 }
 li{
 	color:white;

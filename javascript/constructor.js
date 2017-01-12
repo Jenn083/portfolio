@@ -65,8 +65,7 @@
 //   },
 //
 // ];
-
-var articles = [];
+ var articleAll = [];
 function Projects(options){
   this.projectUrl=options.projectUrl;
   this.publishedOn=options.publishedOn;
@@ -96,20 +95,20 @@ var templateRender=Handlebars.compile(source);
 return templateRender(this);
 };
 
-projects.sort(function(currentObject, nextObject) {
-  return (new Date(nextObject.publishedOn)) - (new Date(currentObject.publishedOn));
-});
-
-projects.forEach(function(ele) {
-  articles.push(new Projects(ele));
-});
+// projects.sort(function(currentObject, nextObject) {
+//   return (new Date(nextObject.publishedOn)) - (new Date(currentObject.publishedOn));
+// });
+//
+// projects.forEach(function(ele) {
+//   articles.push(new Projects(ele));
+// });
 
 var $rowEl = $('<div class="row"></div>');
-for (var i = 0; i < articles.length; i ++) {
-  $rowEl.append(articles[i].toHtml());
+for (var i = 0; i < articleAll.length; i ++) {
+  $rowEl.append(articleAll[i].toHtml());
   console.log(i);
   console.log(i%3);
-  if ( i >=0 && i%3===2 || i ===articles.length-1) {
+  if ( i >=0 && i%3===2 || i ===articleAll.length-1) {
     $('#portfolio').append($rowEl);
     $rowEl = $('<div class="row"></div>');
   }
@@ -118,30 +117,31 @@ for (var i = 0; i < articles.length; i ++) {
 //   articles.push(new Projects(ele));
 // });
 //
-// articles.forEach(function(article) {
-//   $('#portfolio').append(article.toHtml());
-// });
+
+articleAll.forEach(function(article) {
+  $('#portfolio').append(article.toHtml());
+});
 
 
-Article.loadAll = function(rawData) {
+Projects.loadAll = function(rawData) {
   rawData.sort(function(a,b) {
     return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
   });
 
   rawData.forEach(function(ele) {
-    Article.all.push(new Article(ele));
+    articleAll.push(new Projects(ele));
   })
 }
-Article.fetchAll = function() {
+Projects.fetchAll = function() {
   if (localStorage.rawData) {
     var myObj= JSON.parse(localStorage.rawData);
-    Article.loadAll(myObj);
-      articleView.initIndexPage();
+    Projects.loadAll(myObj);
+      // projectsArr.initIndexPage();
   } else {
-    var receivedData = $.getJSON('data/proArr.json', function(data){
+    var receivedData = $.getJSON('data/projectsArr.json', function(data){
       localStorage.setItem('rawData', JSON.stringify(data));
-      Article.loadAll(data);
-      articleView.initIndexPage();
+      Projects.loadAll(data);
+      //articleView.initIndexPage();
     });
 
 

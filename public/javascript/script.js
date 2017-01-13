@@ -1,5 +1,5 @@
 'use strict'
-
+// var projectView = {};
 $(document).ready(function(){
   function hide () {
     $('.hide').hide();
@@ -22,3 +22,9 @@ $(document).ready(function(){
     $('#contact').show();
   });
 });
+// projectView.initIndexPage = function () {
+//   articleAll.forEach(function(article) {
+//     $('#portfolio').append(article.toHtml());
+//   });
+//   projectView.createRow();
+// }

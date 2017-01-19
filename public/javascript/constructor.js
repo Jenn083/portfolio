@@ -1,6 +1,6 @@
 'use strict';
 
-(function () {
+(function (modules) {
   var articleAll = [];
   function Projects(options){
     this.projectUrl=options.projectUrl;
@@ -21,15 +21,22 @@
 
   function createRow () {
     var $rowEl = $('<div class="row"></div>');
-    for (var i = 0; i < articleAll.length; i ++) {
-      $rowEl.append(articleAll[i].toHtml());
-      console.log(i);
-      console.log(i%3);
-      if ( i >=0 && i%3===2 || i === articleAll.length-1) {
+    // for (var i = 0; i < articleAll.length; i ++) {
+    //   $rowEl.append(articleAll[i].toHtml());
+    //   console.log(i);
+    //   console.log(i%3);
+    //   if ( i >=0 && i%3===2 || i === articleAll.length-1) {
+    //     $('#portfolio').append($rowEl);
+    //     $rowEl = $('<div class="row"></div>');
+    //   }
+    // }
+    articleAll.reduce(function(acc, article, index){
+      $rowEl.append(article.toHtml());
+      if ( index >=0 && index%3===2 || index === articleAll.length-1) {
         $('#portfolio').append($rowEl);
         $rowEl = $('<div class="row"></div>');
       }
-    }
+    }, 0)
   }
 
 
@@ -39,10 +46,11 @@
     });
 
     //rawData.forEach(function(ele) {//map
-    Article.all = rawData.map(ele => new Article(ele));
-      articleAll.push(new Data(ele));
-    })
-
+    articleAll = rawData.map( ele => new Projects(ele));
+    /*
+      rawData.map( (ele) => {
+      return new Article(ele);
+    });*/
     createRow();
   }
 
@@ -60,4 +68,5 @@
       });
     }
   }
-});
+  Projects.fetchAll();
+})();
